@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoYoHabibi</title>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Enter text ..." name="name" />
+    <button>click me!!!!!</button>
+
+    <p id="echo"></p>
+    <script type="text/javascript" defer>
+
+
+
+        const echoOutput = (event) => {
+
+            if (input.value === '') {
+
+                input.classList.add('error');
+
+                alert('Please enter a value');
+
+            }
+
+            else {
+
+                input.classList.remove('error');
+
+                echoBlock.textContent = input.value;
+
+                echoBlock.classList.add('text');
+
+            }
+
+        }
+
+        const btn = document.querySelector('button');
+
+        const input = document.querySelector('input');
+
+        const echoBlock = document.getElementById('echo');
+
+        btn.addEventListener('click', echoOutput);
+
+
+
+    </script>
+</body>
+
+</html>
